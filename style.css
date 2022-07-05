@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@600");
+:root {
+    --mainBG: hsl(217, 54%, 11%);
+    --cardBG: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+    --FontSize: 18px;
+    --family: Outfit;
+    --Weights: 300, 400, 600;
+    --Cyan: hsl(178, 100%, 50%);
+    --SoftBlue: hsl(215, 51%, 70%);
+    --activeState: url('./images/icon-view.svg');
+    --equilibrium: url('./images/image-equilibrium.jpg');
+    --eth: url('./images/icon-ethereum.svg');
+    --clock: url('./images/icon-clock.svg');
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background: var(--mainBG);
+    box-sizing: border-box;
+}
+
+main {
+    display: grid;
+    place-items: center;
+}
+
+.card {
+    display: flex;
+    justify-self: center;
+    justify-content: space-around;
+    background: var(--cardBG);
+    border-radius: 3%;
+    margin: 5% 20%;
+}
+
+.items {
+    display: grid;
+    position: relative;
+}
+
+.equilibrium {
+    content: var(--equilibrium);
+    width: 100%;
+    border-radius: 4%;
+}
+
+.hover {
+    margin-top: -100%;
+    width: 100%;
+    background-color: hsla(178, 100%, 50%, 0.472);
+    border-radius: 3%;
+    content: var(--activeState);
+    max-height: max-content;
+    display: none;
+}
+
+.equilibrium:hover {
+    cursor: pointer;
+    background-size: 100%;
+    border-radius: 3%;
+    width: 100%;
+}
+
+.equilibrium:hover~.hover {
+    display: block;
+}
+
+.content {
+    padding: 5%;
+}
+
+.intro {
+    color: var(--White);
+    padding-top: 20px;
+    font-family: var(--family);
+}
+
+.intro:hover {
+    color: var(--Cyan);
+}
+
+.left {
+    color: var(--Cyan);
+}
+
+.text-info {
+    color: var(--SoftBlue);
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 200;
+}
+
+.eth {
+    content: var(--eth);
+}
+
+.clock {
+    content: var(--clock);
+}
+
+img[alt='profile'] {
+    width: 13%;
+    border: 2px solid var(--White);
+    border-radius: 50%;
+}
+
+.left {
+    text-align: right;
+    align-items: center;
+}
+
+.right {
+    text-align: right;
+    align-items: center;
+}
+
+hr {
+    border: 1px solid var(--line);
+}
+
+.footer {
+    color: var(--White);
+    display: flex;
+    align-items: center;
+}
+
+.foot {
+    padding-left: 15px;
+}
+
+.footerinfo {
+    padding-left: 5px;
+    color: var(--SoftBlue);
+}
+
+.footerinfo:hover {
+    color: var(--Cyan);
+}
+
+@media screen and (max-width: 764) {
+    .card {
+        max-width: 200%;
+        background-color: hsl(216, 50%, 16%);
+        border-radius: 1rem;
+    }
+}
